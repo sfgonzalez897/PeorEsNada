@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>PeorEsNada</title>
+        
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">PeorEsNada</h1>
+
+            <h2 class="subtitulo">Selecciona uno de los bolsones:</h2>
+
+            <div id='contenedorTarjetas' class="tarjetas">
+                
+            </div>
+
+            <button id="botonMascotas">Seleccionar</button>
+
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class="titulo">Recorre el mapa con tu Bolson</h1>
+            <h3 class="under-titulo">Puedes utilizar las flechas del teclado</h3>
+            <canvas id="mapa"></canvas>
+            <div class="rejilla-botones">
+                <button class="one"  
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()" 
+                onmousedown="moverArriba()"
+                ontouchstart="moverArriba()"
+                >Arriba</button>
+                <button class="two"  
+                onmouseup="detenerMovimiento()" ontouchsend="detenerMovimiento()" ontouchstart="moverIzquierda()"
+                onmousedown="moverIzquierda()"
+                >Izquierda</button>
+                <button class="three"
+                onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" ontouchstart="moverDerecha()"
+                onmousedown="moverDerecha()"
+                >Derecha</button>
+                <button class="four" 
+                onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()"
+                ontouchstart="moverAbajo()"
+                onmousedown="moverAbajo()"
+                >Abajo</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">PeorEsNada</h1>
+
+            <h2 class="subtitulo">Selecciona 5 ataques:</h2>
+
+            <div id="contenedorAtaques" class="tarjetas-ataques">
+                
+            </div>
+
+            <div id="mensajes">
+                <p id="resultado">Mucha Suerte!</p>
+                
+                <section id="reinicio">
+                    <p>
+                        <button id="brestart">Reiniciar</button>
+                    </p>
+                </section>
+            </div>
+
+            <div class="mensajes2">
+
+                <div class="mensajeJugador">
+                    <p id="mascotajug"></p> 
+                    <p id="vidasuno">0</p>
+                    <p id="ataque-del-jugador"></p>
+                </div>
+
+                <div class="mensajeEnemigo">
+                     <p id="mascotaenem"></p>
+                     <p id="vidasdos">0</p>
+                     <p id="ataque-del-enemigo"></p>
+                     
+                </div>
+
+            </div>
+            
+
+        </section>
+
+       
+
+    </body>
+    
+    <script src="js/mokepon.js"></script>
+</html>
